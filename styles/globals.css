@@ -18,10 +18,24 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+}
+
+button, [role="button"] {
+  background-color: lightgray;
+  border-width: 2px;
+  border-style: solid;
+  border-color: grey;
+  padding: 0px 4px;
+}
+
+button, [role="button"] {
+  background-color: transparent;
+  border-width: 2px;
+  border-style: solid;
+  border-color: grey;
+  padding: 0px 4px;
+}
+
+button, [role="button"] {
+  background-color: transparent;
 }

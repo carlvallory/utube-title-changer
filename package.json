@@ -3,14 +3,18 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 3087",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p 3087",
     "lint": "next lint"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.14",
     "autoprefixer": "10.4.14",
+    "dotenv": "^16.0.3",
+    "googleapis": "^118.0.0",
     "next": "13.4.3",
+    "next-auth": "^4.22.1",
     "postcss": "8.4.23",
     "react": "18.2.0",
     "react-dom": "18.2.0",
