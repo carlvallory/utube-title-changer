@@ -1,8 +1,8 @@
-import { getSession } from 'next-auth/react';
+import { getServerSession } from 'next-auth/react';
 import { google } from 'googleapis';
 
 export default async (req, res) => {
-  const session = await getSession({ req });
+  const session = await getServerSession({ req });
   if (!session) {
     console.log(session);
     res.status(401).json({ error: 'Unauthorized' });
