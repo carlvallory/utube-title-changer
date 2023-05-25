@@ -3,7 +3,6 @@ import { google } from 'googleapis';
 
 export default async (req, res) => {
   const session = await getSession({ req });
-  console.log(req);
   if (!session) {
     res.status(401).json({ error: 'Unauthorized' });
     return;
