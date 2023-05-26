@@ -2,10 +2,16 @@ import { useSession, signOut, getSession } from 'next-auth/react';
 import { google } from 'googleapis';
 
 export default async (req, res) => {
-  const session = await getSession({ req });
-  if (!session) {
-    res.status(401).json({ error: 'Unauthorized' });
-    return;
+  try {
+    const session = await getSession({ req });
+
+    if (!session) {
+      res.status(401).json({ error: 'Unauthorized' });
+      return;
+    }
+    
+  } catch (error) {
+    res.status(500).json({ error: error });
   }
 
   if (req.method === 'POST') {
